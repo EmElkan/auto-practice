@@ -4,19 +4,6 @@ A beginner-friendly web app for learning test automation with [Playwright](https
 
 Features a retro 90s/2000s aesthetic (think Geocities meets Windows 95) but with modern React behavior.
 
-## What You'll Learn
-
-- Locating elements with `getByRole`, `getByLabel`, `getByText` (user-facing locators)
-- Filling forms and clicking buttons
-- Handling authentication flows
-- Waiting for async content and loading states
-- Testing drag and drop interactions
-- Working with data tables (sorting, filtering, pagination)
-- Visual regression testing with screenshots
-- Masking dynamic content (dates, counters, version numbers)
-- Writing assertions with `expect`
-
----
 
 ## Getting Started
 
@@ -66,7 +53,6 @@ npx playwright test --ui
 
 This opens Playwright's visual test runner where you can run tests, see screenshots, and debug failures.
 
----
 
 ## Available Challenges
 
@@ -83,7 +69,6 @@ This opens Playwright's visual test runner where you can run tests, see screensh
 | [Protected Page](/challenges/protected) | Advanced | Auth guards, redirects, session state |
 | [Network Mocking](/challenges/network-mocking) | Advanced | `page.route()`, mock APIs, simulate errors |
 
----
 
 ## Writing Your First Test
 
@@ -117,7 +102,6 @@ Run it:
 npx playwright test tests/my-first-test.spec.ts --headed
 ```
 
----
 
 ## Test Credentials
 
@@ -127,8 +111,6 @@ For the Login and Protected Page challenges:
 Username: testuser
 Password: password123
 ```
-
----
 
 ## Useful Commands
 
@@ -145,7 +127,6 @@ Password: password123
 | `npx playwright test --grep-invert @slow` | Skip slow tests |
 | `npx playwright codegen localhost:5173` | Record actions and generate test code |
 
----
 
 ## Tips for Beginners
 
@@ -159,7 +140,6 @@ Password: password123
 
 5. **Check the test files** - Look at `tests/*.spec.ts` for examples of how to test each challenge
 
----
 
 ## Test Best Practices
 
@@ -173,40 +153,6 @@ The tests in this project follow Playwright best practices:
 
 See `tests/*.spec.ts` for detailed best practices in action.
 
----
-
-## Project Structure
-
-```
-tests/                  # Playwright test files
-  fixtures.ts           # Reusable test helpers
-  accessibility.spec.ts # Accessibility tests
-  visual-testing.spec.ts # Visual regression tests
-  simple-form.spec.ts
-  login.spec.ts
-  loading-states.spec.ts
-  protected.spec.ts
-  drag-drop.spec.ts
-  data-tables.spec.ts
-  modals.spec.ts
-  network-mocking.spec.ts
-
-src/
-  pages/               # Challenge page components
-  components/          # Shared components
-  store/               # State management
-```
-
----
-
-## Tech Stack
-
-- **Frontend:** React 19, TypeScript, Vite
-- **Styling:** Tailwind CSS + custom retro CSS
-- **State:** Zustand + TanStack Query
-- **Testing:** Playwright + axe-core (accessibility)
-
----
 
 ## Need More Help?
 
@@ -214,6 +160,5 @@ src/
 - [Playwright Locators Guide](https://playwright.dev/docs/locators)
 - Check the `tests/` folder for real-world examples
 
----
 
 Built with [Claude Code](https://claude.ai/claude-code)

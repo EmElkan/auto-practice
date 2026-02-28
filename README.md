@@ -2,8 +2,9 @@
 
 A beginner-friendly web app for learning test automation with [Playwright](https://playwright.dev). Practice writing real tests against interactive challenges - forms, authentication, drag & drop, data tables, and more.
 
-Features a retro 90s/2000s aesthetic (think Geocities meets Windows 95) but with modern React behavior.
+Features a retro 90s/2000s aesthetic (think Geocities meets Windows 95) but with modern React behaviour.
 
+https://github.com/user-attachments/assets/7b48acc7-af91-437b-882a-6152423fc998
 
 ## Getting Started
 

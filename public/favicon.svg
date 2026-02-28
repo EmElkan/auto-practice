@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Retro CRT Monitor -->
+  <!-- Monitor body (beige/gray like old PCs) -->
+  <rect x="2" y="2" width="28" height="22" fill="#c0c0c0" stroke="#808080" stroke-width="1"/>
+  <!-- 3D bevel effect - top/left light -->
+  <path d="M2 2 L30 2 L28 4 L4 4 L4 22 L2 24 Z" fill="#dfdfdf"/>
+  <!-- 3D bevel effect - bottom/right dark -->
+  <path d="M30 2 L30 24 L28 22 L28 4 L4 22 L2 24 L30 24 Z" fill="#808080"/>
+  <!-- Screen (dark blue like old monitors) -->
+  <rect x="5" y="5" width="22" height="15" fill="#000080"/>
+  <!-- Screen shine -->
+  <rect x="5" y="5" width="22" height="2" fill="#0000aa" opacity="0.5"/>
+  <!-- Blinking cursor on screen -->
+  <rect x="8" y="12" width="6" height="2" fill="#00ff00"/>
+  <!-- Monitor stand -->
+  <rect x="12" y="24" width="8" height="2" fill="#808080"/>
+  <rect x="10" y="26" width="12" height="3" fill="#c0c0c0" stroke="#808080" stroke-width="1"/>
+  <!-- Power LED (green) -->
+  <circle cx="26" cy="21" r="1.5" fill="#00ff00"/>
+</svg>

@@ -1,0 +1,522 @@
+@import "tailwindcss";
+
+/* ================================================
+   RETRO WEB THEME (circa 1995-2000)
+   Early web maximalism - Times New Roman, beveled
+   buttons, gray backgrounds, blue links, HR tags
+   ================================================ */
+
+:root {
+  --retro-bg: #c0c0c0;
+  --retro-bg-dark: #808080;
+  --retro-bg-light: #dfdfdf;
+  --retro-text: #000000;
+  --retro-link: #0000ee;
+  --retro-link-visited: #551a8b;
+  --retro-link-active: #ff0000;
+  --retro-border-light: #ffffff;
+  --retro-border-dark: #404040;
+  --retro-input-bg: #ffffff;
+  --retro-success: #005a00;
+  --retro-error: #8b0000;
+  --retro-warning: #7a3d00;
+}
+
+/* Base styles */
+body {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+  line-height: 1.4;
+  color: var(--retro-text);
+  background-color: var(--retro-bg);
+  margin: 0;
+  padding: 0;
+}
+
+/* Classic blue underlined links */
+a {
+  color: var(--retro-link);
+  text-decoration: underline;
+}
+
+a:visited {
+  color: var(--retro-link-visited);
+}
+
+a:hover,
+a:active {
+  color: var(--retro-link-active);
+}
+
+/* Retro beveled button - 3D raised effect */
+.retro-button {
+  font-family: "MS Sans Serif", "Segoe UI", Tahoma, sans-serif;
+  font-size: 12px;
+  background-color: var(--retro-bg);
+  color: var(--retro-text);
+  border: 2px solid;
+  border-color: var(--retro-border-light) var(--retro-border-dark) var(--retro-border-dark) var(--retro-border-light);
+  padding: 4px 16px;
+  cursor: pointer;
+  min-width: 75px;
+}
+
+.retro-button:hover {
+  background-color: var(--retro-bg-light);
+}
+
+.retro-button:active {
+  border-color: var(--retro-border-dark) var(--retro-border-light) var(--retro-border-light) var(--retro-border-dark);
+  padding: 5px 15px 3px 17px;
+}
+
+.retro-button:disabled {
+  color: #5a5a5a;
+  cursor: not-allowed;
+}
+
+/* Retro input fields */
+.retro-input {
+  font-family: "MS Sans Serif", "Segoe UI", Tahoma, sans-serif;
+  font-size: 12px;
+  background-color: var(--retro-input-bg);
+  color: var(--retro-text);
+  border: 2px solid;
+  border-color: var(--retro-border-dark) var(--retro-border-light) var(--retro-border-light) var(--retro-border-dark);
+  padding: 4px 6px;
+}
+
+.retro-input:focus {
+  outline: 1px dotted var(--retro-text);
+  outline-offset: -2px;
+}
+
+/* Retro panel - sunken 3D effect */
+.retro-panel {
+  background-color: var(--retro-bg);
+  border: 2px solid;
+  border-color: var(--retro-border-dark) var(--retro-border-light) var(--retro-border-light) var(--retro-border-dark);
+  padding: 8px;
+}
+
+/* Retro panel - raised 3D effect */
+.retro-panel-raised {
+  background-color: var(--retro-bg);
+  border: 2px solid;
+  border-color: var(--retro-border-light) var(--retro-border-dark) var(--retro-border-dark) var(--retro-border-light);
+  padding: 8px;
+}
+
+/* Retro window/dialog */
+.retro-window {
+  background-color: var(--retro-bg);
+  border: 2px solid;
+  border-color: var(--retro-border-light) var(--retro-border-dark) var(--retro-border-dark) var(--retro-border-light);
+  box-shadow: 2px 2px 0px var(--retro-border-dark);
+}
+
+.retro-window-title {
+  background: linear-gradient(90deg, #000080, #1084d0);
+  color: white;
+  font-family: "MS Sans Serif", "Segoe UI", Tahoma, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Classic HR styling */
+hr {
+  border: none;
+  border-top: 1px solid var(--retro-border-dark);
+  border-bottom: 1px solid var(--retro-border-light);
+  height: 2px;
+  margin: 16px 0;
+}
+
+/* Retro table */
+.retro-table {
+  border-collapse: collapse;
+  font-family: "MS Sans Serif", "Segoe UI", Tahoma, sans-serif;
+  font-size: 12px;
+}
+
+.retro-table th,
+.retro-table td {
+  border: 1px solid var(--retro-border-dark);
+  padding: 4px 8px;
+  text-align: left;
+}
+
+.retro-table th {
+  background-color: var(--retro-bg);
+}
+
+.retro-table tr:nth-child(even) {
+  background-color: var(--retro-bg-light);
+}
+
+/* Marquee effect for that extra retro feel */
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.retro-marquee {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.retro-marquee-content {
+  display: inline-block;
+  animation: marquee 55s linear infinite;
+}
+
+/* Under construction banner */
+.under-construction {
+  background: repeating-linear-gradient(
+    45deg,
+    #ffcc00,
+    #ffcc00 10px,
+    #000000 10px,
+    #000000 20px
+  );
+  color: #000000;
+  font-weight: bold;
+  text-align: center;
+  padding: 4px 8px;
+  font-family: "Comic Sans MS", "MS Sans Serif", sans-serif;
+  -webkit-text-stroke: 0.5px #ffffff;
+  text-shadow:
+    -0.5px -0.5px 0 #ffffff,
+     0.5px -0.5px 0 #ffffff,
+    -0.5px  0.5px 0 #ffffff,
+     0.5px  0.5px 0 #ffffff;
+}
+
+/* Visitor counter style */
+.visitor-counter {
+  font-family: "Courier New", monospace;
+  background-color: #000000;
+  color: #00ff00;
+  padding: 2px 8px;
+  border: 2px inset var(--retro-bg);
+  display: inline-block;
+}
+
+/* Status messages */
+.retro-success {
+  color: var(--retro-success);
+  font-weight: bold;
+}
+
+.retro-error {
+  color: var(--retro-error);
+  font-weight: bold;
+}
+
+.retro-warning {
+  color: var(--retro-warning);
+  font-weight: bold;
+}
+
+/* Blinking text - the most 90s thing ever */
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* Respect user preference for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .blink {
+    animation: none;
+  }
+
+  .retro-marquee-content {
+    animation: none;
+  }
+
+  .retro-loading::before {
+    animation: none;
+  }
+
+  .retro-skeleton {
+    animation: none;
+  }
+}
+
+/* Scrolling text area */
+.retro-textarea {
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  background-color: var(--retro-input-bg);
+  color: var(--retro-text);
+  border: 2px solid;
+  border-color: var(--retro-border-dark) var(--retro-border-light) var(--retro-border-light) var(--retro-border-dark);
+  padding: 4px;
+  resize: both;
+}
+
+/* Fieldset styling */
+fieldset {
+  border: 2px groove var(--retro-bg-dark);
+  padding: 8px;
+  margin: 8px 0;
+}
+
+legend {
+  font-family: "MS Sans Serif", "Segoe UI", Tahoma, sans-serif;
+  font-size: 12px;
+  padding: 0 4px;
+}
+
+/* Loading spinner - retro hourglass style */
+@keyframes hourglass {
+  0% { content: "⏳"; }
+  50% { content: "⌛"; }
+}
+
+.retro-loading::before {
+  content: "⏳";
+  animation: hourglass 1s step-end infinite;
+  margin-right: 8px;
+}
+
+/* Skeleton loader with retro dithering effect */
+@keyframes dither {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+.retro-skeleton {
+  background: repeating-linear-gradient(
+    90deg,
+    var(--retro-bg-dark) 0px,
+    var(--retro-bg-dark) 2px,
+    var(--retro-bg) 2px,
+    var(--retro-bg) 4px
+  );
+  animation: dither 1.5s ease-in-out infinite;
+}
+
+/* Odometer-style visitor counter */
+.odometer {
+  display: inline-flex;
+  background: #000;
+  padding: 2px;
+  border: 2px inset var(--retro-bg);
+}
+
+.odometer-digit {
+  background: linear-gradient(180deg, #1a1a1a 0%, #000 50%, #1a1a1a 100%);
+  color: #ff0000;
+  font-family: "Courier New", monospace;
+  font-weight: bold;
+  font-size: 16px;
+  width: 14px;
+  text-align: center;
+  border: 1px solid #333;
+  text-shadow: 0 0 5px #ff0000;
+}
+
+/* Award badges */
+.award-badge {
+  background: linear-gradient(135deg, #c0c0c0 0%, #808080 100%);
+  border: 2px outset #c0c0c0;
+  padding: 4px 8px;
+  text-align: center;
+  font-family: "Arial Black", Arial, sans-serif;
+  min-width: 70px;
+}
+
+.award-badge.gold {
+  background: linear-gradient(135deg, #ffd700 0%, #b8860b 100%);
+  border-color: #ffd700;
+  color: #000;
+}
+
+.award-badge.blue {
+  background: linear-gradient(135deg, #4169e1 0%, #000080 100%);
+  border-color: #4169e1;
+  color: white;
+}
+
+.award-badge-star {
+  font-size: 20px;
+  color: #b8860b;
+  text-shadow: 1px 1px 0 #000;
+}
+
+.award-badge.blue .award-badge-star {
+  color: #ffff00;
+}
+
+.award-badge-text {
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: -0.5px;
+}
+
+.award-badge-subtext {
+  font-size: 8px;
+  font-weight: normal;
+}
+
+/* Browser compatibility badges */
+.browser-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border: 2px outset;
+  font-family: "MS Sans Serif", Tahoma, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.browser-badge.netscape {
+  background: linear-gradient(180deg, #006600 0%, #004400 100%);
+  border-color: #008800;
+  color: white;
+}
+
+.browser-badge.ie {
+  background: linear-gradient(180deg, #0066cc 0%, #003366 100%);
+  border-color: #0088ff;
+  color: white;
+}
+
+.browser-badge-icon {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Times New Roman", serif;
+}
+
+.browser-badge.netscape .browser-badge-icon {
+  color: #90ee90;
+}
+
+.browser-badge.ie .browser-badge-icon {
+  font-family: "Georgia", serif;
+  font-style: italic;
+  color: #b0e0ff;
+}
+
+.browser-badge-text {
+  line-height: 1.1;
+  text-align: left;
+}
+
+/* Web ring */
+.webring {
+  background: var(--retro-bg-light);
+  border: 2px inset var(--retro-bg);
+  padding: 8px;
+  display: inline-block;
+}
+
+.webring-title {
+  font-family: "Comic Sans MS", "MS Sans Serif", sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  margin-bottom: 4px;
+  color: #000066;
+}
+
+.webring-nav {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  font-size: 11px;
+}
+
+.webring-nav a {
+  font-family: "MS Sans Serif", Tahoma, sans-serif;
+}
+
+/* Teletext/Ceefax style badge */
+.teletext-badge {
+  background: #000000;
+  border: 3px solid #ffff00;
+  padding: 8px 16px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Courier New", monospace;
+  gap: 2px;
+}
+
+.teletext-badge-text {
+  color: #00ffff;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.teletext-badge-title {
+  color: #ffff00;
+  font-size: 16px;
+  font-weight: bold;
+  text-shadow: 2px 2px 0 #ff00ff;
+  letter-spacing: 2px;
+}
+
+.teletext-badge-page {
+  color: #00ff00;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Freeserve browser badge */
+.browser-badge.freeserve {
+  background: linear-gradient(180deg, #ff6600 0%, #cc3300 100%);
+  border-color: #ff9900;
+  color: white;
+}
+
+.browser-badge.freeserve .browser-badge-icon {
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Millionaire lifeline style badges */
+.lifeline-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: linear-gradient(180deg, #1a1a4e 0%, #000033 100%);
+  border: 2px solid #ffd700;
+  border-radius: 20px;
+  padding: 4px 12px;
+  color: #ffd700;
+  font-family: "Arial", sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.lifeline-badge-icon {
+  font-size: 14px;
+}
+
+.lifeline-badge.used {
+  opacity: 0.5;
+  border-color: #666;
+  color: #999;
+}
+
+/* Spice Girls inspired colour accent */
+.girl-power {
+  background: linear-gradient(90deg, #ff69b4, #ff1493, #ff69b4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: bold;
+}
